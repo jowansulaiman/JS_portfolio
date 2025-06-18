@@ -31,13 +31,40 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.8
+  # CORE UTILITIES
+  google_fonts: ^6.1.0
+  flutter_animate: ^4.5.0
+  url_launcher: ^6.2.5
+  shared_preferences: ^2.2.2
+
+  # ICONS & UI
+  font_awesome_flutter: ^10.7.0
+  timeline_tile: ^2.0.0
+  qr_flutter: ^4.1.0
+
+  cupertino_icons: ^1.0.2
+# NEU: Konfiguration für das Icon-Paket
+flutter_launcher_icons:
+  # Android Konfiguration
+  android: true
+
+  # iOS Konfiguration
+  ios: true
+
+  # Web Konfiguration
+  web:
+    generate: true
+    image_path: "assets/icon/app_icon.png" # Pfad zu deinem Logo
+    background_color: "#FCFBF8"           # Hintergrundfarbe für Web (Light-Theme)
+    theme_color: "#9A7B4F"                # Theme-Farbe für Web (Light-Theme)
+
+  # Haupt-Pfad für das Bild (wird für Android & iOS verwendet)
+  image_path: "assets/icon/app_icon.png"
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: ^0.13.1
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -51,7 +78,11 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
+  assets:
+    - assets/sounds/finish.mp3
+    - assets/
+    - assets/icon/
+    - assets/data/
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

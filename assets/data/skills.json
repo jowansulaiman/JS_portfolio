@@ -1,0 +1,24 @@
+{
+  "Programmiersprachen": [
+    "Java",
+    "C++",
+    "Python",
+    "SQL",
+    "Haskell",
+    "Visual Basic"
+  ],
+  "Frameworks & Technologien": [
+    ".NET",
+    "OpenCV",
+    "WPF",
+    "JUnit"
+  ],
+  "Tools & Konzepte": [
+    "Git",
+    "Visual Studio",
+    "JetBrains IDEs",
+    "OOP",
+    "Linux",
+    "Windows"
+  ]
+}

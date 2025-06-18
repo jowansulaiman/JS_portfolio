@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Praktikant IT-Sicherheit",
+    "company": "CAU zu Kiel",
+    "period": "März 2023 – April 2023",
+    "location": "Kiel, Deutschland",
+    "description": "• Analyse bekannter Sicherheitslücken und Konzeption von Abwehrmechanismen.\n• Implementierung von Schutzmaßnahmen gegen spezifische Bedrohungen."
+  },
+  {
+    "title": "Praktikant Bildverarbeitung",
+    "company": "CAU zu Kiel",
+    "period": "Dez. 2022 – Jan. 2023",
+    "location": "Kiel, Deutschland",
+    "description": "• Entwicklung der Projekte \"ShapeChaser\" und \"BarCodeScanner\" unter Verwendung von Bildverarbeitungsbibliotheken."
+  },
+  {
+    "title": "Praktikant Funktionale Programmierung",
+    "company": "CAU zu Kiel",
+    "period": "Feb. 2022 – März 2022",
+    "location": "Kiel, Deutschland",
+    "description": "• Entwicklung eines Compilers für die Programmiersprache Prolog in Haskell."
+  },
+  {
+    "title": "Praktikant Spieleentwicklung",
+    "company": "CAU zu Kiel",
+    "period": "Okt. 2021 – Nov. 2021",
+    "location": "Kiel, Deutschland",
+    "description": "• Programmierung eines interaktiven 2D-Spiels (Pacman-Klon) inklusive grafischer Benutzeroberfläche (GUI)."
+  },
+  {
+    "title": "Projekt: Digitales Türschild",
+    "company": "Worlée GmbH",
+    "period": "April 2020 – Juni 2020",
+    "location": "Hamburg, Deutschland",
+    "description": "• Konzeption und Aufbau eines digitalen Türschilds mittels Arduino und E-Paper.\n• Implementierung der Steuerungssoftware in C++."
+  },
+  {
+    "title": "Projekt: Reportcenter",
+    "company": "Worlée GmbH",
+    "period": "Jan. 2018 – Dez. 2019",
+    "location": "Hamburg, Deutschland",
+    "description": "• Weiterentwicklung und Wartung des unternehmensinternen Reportcenters.\n• Programmierung in Visual Basic unter Verwendung des .NET-Frameworks."
+  }
+]
