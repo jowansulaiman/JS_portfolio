@@ -1,0 +1,90 @@
+[
+  {
+    "title": "Projekt Reportcenter",
+    "category": "Anwendungsentwicklung",
+    "shortDescription": "Weiterentwicklung des unternehmensinternen Reportcenters in Visual Basic unter Verwendung des .NET-Frameworks.",
+    "longDescription": "Als Teil meiner Ausbildung bei der Worlée GmbH war ich maßgeblich an der Weiterentwicklung und Wartung des internen Reportcenters beteiligt. Meine Aufgaben umfassten die Anforderungsanalyse, die Implementierung neuer Features in Visual Basic und die Anbindung an SQL-Datenbanken, um komplexe Berichte zu generieren.",
+    "technologies": ["Visual Basic", ".NET", "SQL", "Crystal Reports"],
+    "imagePaths": [
+      "assets/imgs/reportCenter_CrystalReport.jpg",
+      "assets/imgs/reportCenter.webp",
+      "assets/imgs/reportCenter_SQL.png"
+    ],
+    "githubRepoUrl": null,
+    "liveDemoUrl": null
+  },
+  {
+    "title": "Digitales Türschild (Embedded)",
+    "category": "Embedded Systems",
+    "shortDescription": "Aufbau eines digitalen Türschilds mit Arduino und E-Paper, inklusive der Software-Programmierung in C++.",
+    "longDescription": "In diesem Projekt habe ich ein energieeffizientes, digitales Türschild von Grund auf konzipiert. Dies umfasste die Auswahl der Hardware (Arduino, E-Paper-Display), den Aufbau der Schaltung und die Programmierung der C++-Software zur Ansteuerung des Displays und zur Verarbeitung von Daten.",
+    "technologies": ["C++", "Arduino", "E-Paper"],
+    "imagePaths": [
+      "assets/imgs/door_sign_1.png",
+      "assets/imgs/door_sign_2.png"
+    ],
+    "githubRepoUrl": null,
+    "liveDemoUrl": null
+  },
+  {
+    "title": "Pacman-Klon",
+    "category": "Spieleentwicklung",
+    "shortDescription": "Entwicklung eines 2D-Spiels mit interaktiver GUI im Rahmen eines Universitätspraktikums.",
+    "longDescription": "Dieses Projekt umfasste die vollständige Entwicklung eines Pacman-Klons in Java. Besondere Herausforderungen waren die Implementierung der Kollisionserkennung, der Wegfindungs-Algorithmen für die Geister und die Gestaltung einer performanten, grafischen Benutzeroberfläche.",
+    "technologies": ["Java", "GUI", "OOP"],
+    "imagePaths": [
+      "assets/imgs/pacman_1.png",
+      "assets/imgs/pacman_2.png"
+    ],
+    "githubRepoUrl": null,
+    "liveDemoUrl": null
+  },
+  {
+    "title": "Mieterverwaltungssystem",
+    "category": "Anwendungsentwicklung",
+    "shortDescription": "Entwicklung eines digitalen Systems zur effizienten Verwaltung von Mietverträgen, Mietern und Zahlungen.",
+    "longDescription": "Entwicklung eines digitalen Systems zur effizienten Verwaltung von Mietverträgen und Mietern für Vermieter und Hausverwaltungen. Das System soll Mieterinformationen speichern, Zahlungsverläufe nachverfolgen und automatisierte Benachrichtigungen senden können. Zu den Kernfunktionen gehören das Anlegen, Löschen und Benachrichtigen von Mietern, die Verwaltung von Zahlungsstatus sowie die Generierung von Monats- und Jahresberichten.",
+    "technologies": [
+      "HTML",
+      "JS",
+      "CSS",
+      "REST API",
+      "Json",
+      "Docker"
+    ],
+    "imagePaths": [
+      "assets/imgs/mvs1.png",
+      "assets/imgs/mvs2.png",
+      "assets/imgs/mvs3.png",
+      "assets/imgs/mvs4.png",
+      "assets/imgs/mvs5.png"
+
+    ],
+    "githubRepoUrl": null,
+    "liveDemoUrl": null
+  },
+  {
+    "title": "EduBuy",
+    "category": "Universitäts-Softwareprojekt",
+    "shortDescription": "Konzeption und Entwurf einer Web- und Android-Anwendung für eine Planspiel-Plattform im Bildungsbereich.",
+    "longDescription": "Das Projekt umfasst eine Web- und Android-Anwendung zur Simulation von Geschäftsprozessen, inklusive der Verwaltung von Großhändlern, Produkten und Bestellungen. Zu den Kernanforderungen gehören Benutzerrollen (Schüler/Lehrer), Deeplink-Registrierung und ein Rechnungssystem.",
+    "technologies": [
+      "Systemarchitektur",
+      "React",
+      "UML",
+      "REST API",
+      "Java"
+    ],
+    "imagePaths": [
+      "assets/imgs/eduBuy/eduBuy0.jpg",
+      "assets/imgs/eduBuy/eduBuy1.jpg",
+      "assets/imgs/eduBuy/eduBuy2.jpg",
+      "assets/imgs/eduBuy/eduBuy3.jpg",
+      "assets/imgs/eduBuy/eduBuy4.jpg",
+      "assets/imgs/eduBuy/eduBuy5.jpg",
+      "assets/imgs/eduBuy/eduBuy6.jpg"
+    ],
+    "githubRepoUrl": null,
+    "liveDemoUrl": null
+  }
+]

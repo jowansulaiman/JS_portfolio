@@ -1,7 +1,8 @@
 // lib/screens/home_screen.dart
 import 'package:flutter/material.dart';
 import 'package:js_portfolio/app/data_loader.dart';
-import 'package:js_portfolio/screens/portfolio_page.dart'; // NEU: Die eigentliche Seite
+import 'package:js_portfolio/screens/loading_screen.dart'; // NEU
+import 'package:js_portfolio/screens/portfolio_page.dart';
 
 class HomeScreen extends StatelessWidget {
   final VoidCallback toggleTheme;
@@ -9,18 +10,17 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // FutureBuilder lädt die Daten und zeigt je nach Status (laden, fertig, fehler) eine andere UI an.
     return FutureBuilder<PortfolioData>(
       future: loadPortfolioData(),
       builder: (context, snapshot) {
+        // GEÄNDERT: Zeigt jetzt den neuen Lade-Bildschirm an
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return const Scaffold(body: Center(child: CircularProgressIndicator()));
+          return const LoadingScreen();
         }
         if (snapshot.hasError) {
           return Scaffold(body: Center(child: Text('Fehler beim Laden der Daten: ${snapshot.error}')));
         }
         if (snapshot.hasData) {
-          // Wenn die Daten da sind, bauen wir die Hauptseite und übergeben die Daten.
           return PortfolioPage(
             data: snapshot.data!,
             toggleTheme: toggleTheme,

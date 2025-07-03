@@ -5,13 +5,16 @@
     "Python",
     "SQL",
     "Haskell",
-    "Visual Basic"
+    "Visual Basic",
+    "Dart"
   ],
   "Frameworks & Technologien": [
     ".NET",
     "OpenCV",
     "WPF",
-    "JUnit"
+    "JUnit",
+    "QT",
+    "Flutter"
   ],
   "Tools & Konzepte": [
     "Git",
@@ -19,6 +22,9 @@
     "JetBrains IDEs",
     "OOP",
     "Linux",
-    "Windows"
+    "Windows",
+    "Arduino",
+    "Docker",
+    "CI/CD"
   ]
 }

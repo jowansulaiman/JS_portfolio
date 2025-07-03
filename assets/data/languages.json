@@ -1,22 +1,27 @@
 [
   {
     "language": "Arabisch",
-    "level": "Muttersprache"
+    "level": "Muttersprache",
+    "proficiency": 1.0
   },
   {
     "language": "Kurdisch",
-    "level": "Muttersprache"
+    "level": "Muttersprache",
+    "proficiency": 1.0
   },
   {
     "language": "Deutsch",
-    "level": "Sehr gute Kenntnisse"
+    "level": "Sehr gute Kenntnisse",
+    "proficiency": 0.9
   },
   {
     "language": "Englisch",
-    "level": "Gute Kenntnisse"
+    "level": "Gute Kenntnisse",
+    "proficiency": 0.7
   },
   {
     "language": "Französisch",
-    "level": "Grundkenntnisse"
+    "level": "Grundkenntnisse",
+    "proficiency": 0.4
   }
 ]

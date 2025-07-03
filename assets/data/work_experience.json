@@ -1,31 +1,31 @@
 [
   {
-    "title": "Praktikant IT-Sicherheit",
+    "title": "Dozent für IT & technische Administration",
+    "company": "ABS-IT UG",
+    "period": "Oktober 2024 - laufend",
+    "location": "Kiel, Deutschland",
+    "description": "• Leitung von IT-Projekten und Durchführung technischer Schulungen."
+  },
+  {
+    "title": "Praktikum IT-Sicherheit",
     "company": "CAU zu Kiel",
     "period": "März 2023 – April 2023",
     "location": "Kiel, Deutschland",
-    "description": "• Analyse bekannter Sicherheitslücken und Konzeption von Abwehrmechanismen.\n• Implementierung von Schutzmaßnahmen gegen spezifische Bedrohungen."
+    "description": "• Sicherheitslücken identifiziert und erklärt.\n• Abwehrmechanismen gegen Bedrohungen implementiert."
   },
   {
-    "title": "Praktikant Bildverarbeitung",
+    "title": "Praktikum Bildverarbeitung",
     "company": "CAU zu Kiel",
     "period": "Dez. 2022 – Jan. 2023",
     "location": "Kiel, Deutschland",
-    "description": "• Entwicklung der Projekte \"ShapeChaser\" und \"BarCodeScanner\" unter Verwendung von Bildverarbeitungsbibliotheken."
+    "description": "• ShapeChaser zur Formenerkennung entwickelt.\n• Präzisen Barcode-Scanner implementiert."
   },
   {
-    "title": "Praktikant Funktionale Programmierung",
+    "title": "Praktikum Funktionale Programmierung",
     "company": "CAU zu Kiel",
     "period": "Feb. 2022 – März 2022",
     "location": "Kiel, Deutschland",
     "description": "• Entwicklung eines Compilers für die Programmiersprache Prolog in Haskell."
-  },
-  {
-    "title": "Praktikant Spieleentwicklung",
-    "company": "CAU zu Kiel",
-    "period": "Okt. 2021 – Nov. 2021",
-    "location": "Kiel, Deutschland",
-    "description": "• Programmierung eines interaktiven 2D-Spiels (Pacman-Klon) inklusive grafischer Benutzeroberfläche (GUI)."
   },
   {
     "title": "Projekt: Digitales Türschild",
@@ -33,12 +33,18 @@
     "period": "April 2020 – Juni 2020",
     "location": "Hamburg, Deutschland",
     "description": "• Konzeption und Aufbau eines digitalen Türschilds mittels Arduino und E-Paper.\n• Implementierung der Steuerungssoftware in C++."
-  },
+  },    {
+  "title": "Studentische Hilfskraft (Tutor)",
+  "company": "CAU zu Kiel",
+  "period": "Juli 2024 – laufend ",
+  "location": "Kiel, Deutschland",
+  "description": "• Unterstützung von Studierenden in den Fächern Mathematik (A, B, C).\n• Betreuung von Tutorien in den Bereichen Programmierung und Softwaretechnik.\n• Beantwortung von Fachfragen zur Vertiefung des Lernstoffs."
+},
   {
-    "title": "Projekt: Reportcenter",
+    "title": "Projekt: Report Center",
     "company": "Worlée GmbH",
     "period": "Jan. 2018 – Dez. 2019",
     "location": "Hamburg, Deutschland",
-    "description": "• Weiterentwicklung und Wartung des unternehmensinternen Reportcenters.\n• Programmierung in Visual Basic unter Verwendung des .NET-Frameworks."
+    "description": "• Weiterentwicklung des unternehmensinternen Reportcenters in Visual Basic (.NET).\n• Optimierung der Datenanalyse und Implementierung effizienter Algorithmen.\n• Erstellung und Anpassung von benutzerfreundlichen Schnittstellen."
   }
 ]

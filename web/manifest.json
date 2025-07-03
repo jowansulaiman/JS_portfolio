@@ -1,11 +1,11 @@
 {
-    "name": "js_portfolio",
+    "name": "Jowans Portfolio",
     "short_name": "js_portfolio",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#FCFBF8",
-    "theme_color": "#9A7B4F",
-    "description": "A new Flutter project.",
+    "background_color": "#0175C2",
+    "theme_color": "#0175C2",
+    "description": "Das persönliche Portfolio von Jowan Sulaiman.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

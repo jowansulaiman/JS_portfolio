@@ -1,0 +1,49 @@
+[
+  {
+    "title": "Abschlusszeugnis der Berufsschule",
+    "issuer": "BS ITECH Elbinsel Wilhelmsburg",
+    "year": "2020",
+    "category": "Ausbildung",
+    "document_url": "documents/abschlusszeugnis_berufsschule.pdf",
+    "status": "available"
+  },
+  {
+    "title": "Programmierkurs Java",
+    "issuer": "Volkshochschule Hamburg",
+    "year": "2017",
+    "category": "Weiterbildung",
+    "document_url": null,
+    "status": "not_available"
+  },
+  {
+    "title": "Einstieg in die Webentwicklung",
+    "issuer": "opencampus.sh / CAU zu Kiel",
+    "year": "2024/25",
+    "category": "Weiterbildung",
+    "document_url": "documents/achievement_certificate.pdf",
+    "status": "available"
+  },
+  {
+    "title": "Arbeitszeugnis",
+    "issuer": "Worlée GmbH, Hamburg",
+    "year": "2020",
+    "category": "Berufserfahrung",
+    "document_url": "documents/Arbeitszeugnis.pdf",
+    "status": "available"
+  },
+  {
+    "title": "Prüfungszeugnis Fachinformatiker",
+    "issuer": "Handelskammer Hamburg",
+    "year": "2020",
+    "category": "Ausbildung",
+    "document_url": "documents/pruefungszeugnis_hk.pdf",
+    "status": "available"
+  },  {
+  "title": "Elektronische Projekte mit Arduino",
+  "issuer": "opencampus.sh / FabLab Kiel",
+  "year": "2025",
+  "category": "Weiterbildung",
+  "document_url": null,
+  "status": "in_progress"
+  }
+]

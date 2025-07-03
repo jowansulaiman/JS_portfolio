@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:js_portfolio/models/cv_data.dart';
-import 'package:js_portfolio/screens/portfolio_page.dart'; // Import für den DataProvider
+import 'package:js_portfolio/app/app_theme.dart';
+import 'package:js_portfolio/models/models.dart';
+import 'package:js_portfolio/screens/portfolio_page.dart';
 import 'package:js_portfolio/utils/responsive_helper.dart';
 import 'package:js_portfolio/widgets/common/image_preview_dialog.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:animated_text_kit/animated_text_kit.dart'; // NEU: Import für die Animation
 
 class HeroSection extends StatelessWidget {
   final void Function(int) onJump;
@@ -25,7 +27,6 @@ class HeroSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Daten aus dem Kontext holen, anstatt von AppData
     final portfolioData = DataProvider.of(context)!.data;
 
     Widget profileCard = _ProfileCard(personalInfo: portfolioData.personalInfo);
@@ -59,19 +60,86 @@ class HeroSection extends StatelessWidget {
 class _ProfileCard extends StatelessWidget {
   final PersonalInfo personalInfo;
   const _ProfileCard({required this.personalInfo});
+  Widget _buildBackgroundBubbles(BuildContext context) {
+    final primaryColor = Theme.of(context).colorScheme.primary;
+
+    return Stack(
+      children: [
+        // Blase 1
+        Positioned(
+          top: 100,
+          left: 50,
+          child: Container(
+            width: 60,
+            height: 60,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: primaryColor.withOpacity(0.08),
+            ),
+          ).animate(onPlay: (c) => c.repeat(reverse: true), delay: 300.ms)
+              .move(duration: 8000.ms, begin: Offset.zero, end: const Offset(20, -80), curve: Curves.easeInOut),
+        ),
+        // Blase 2
+        Positioned(
+          top: 250,
+          right: 80,
+          child: Container(
+            width: 120,
+            height: 120,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: primaryColor.withOpacity(0.05),
+            ),
+          ).animate(onPlay: (c) => c.repeat(reverse: true))
+              .move(duration: 12000.ms, begin: Offset.zero, end: const Offset(-50, 100), curve: Curves.easeInOut),
+        ),
+        // Blase 3
+        Positioned(
+          bottom: 60,
+          left: -40,
+          child: Container(
+            width: 200,
+            height: 200,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: primaryColor.withOpacity(0.03),
+            ),
+          ).animate(onPlay: (c) => c.repeat(reverse: true), delay: 1000.ms)
+              .move(duration: 15000.ms, begin: Offset.zero, end: const Offset(80, -120), curve: Curves.easeInOut),
+        ),
+      ],
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
-    // Daten, die nicht aus JSON kommen, sind hier lokal definiert.
     const profileImagePath = 'assets/profile.jpg';
     final socialLinks = {
-      FontAwesomeIcons.github: 'https://github.com',
-      FontAwesomeIcons.linkedinIn: 'https://linkedin.com',
-      FontAwesomeIcons.xing: 'https://www.xing.com',
+      FontAwesomeIcons.github: 'https://github.com/jowansulaiman',
+      FontAwesomeIcons.linkedinIn: 'https://linkedin.com/in/jowan-sulaiman',
+      FontAwesomeIcons.xing: 'https://www.xing.com/profile/Jowan_Sulaiman',
     };
 
+    // NEU: Liste der Texte, die animiert werden sollen
+    const animatedTexts = [
+      'Software Developer',
+      'Cybersecurity',
+      'Programmierung',
+      'Automatisierung',
+      'Java & Python',
+      'Flutter & Dart',
+    ];
+
+    // Style für den animierten Text, damit er zum Design passt
+    final textStyle = Theme.of(context)
+        .textTheme
+        .bodyMedium
+        ?.copyWith(letterSpacing: 3);
+
+
     return Container(
-      color: Theme.of(context).colorScheme.surfaceContainer,
+      color: Theme.of(context).extension<CustomThemeExtension>()!.accentSectionBackground,
+
       padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 60),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -113,7 +181,6 @@ class _ProfileCard extends StatelessWidget {
             ).animate().scale(duration: 500.ms, curve: Curves.easeOut),
           ),
           const SizedBox(height: 24),
-          // Daten aus dem Model verwenden
           Text(personalInfo.name,
               style: Theme.of(context)
                   .textTheme
@@ -125,12 +192,21 @@ class _ProfileCard extends StatelessWidget {
               width: 40,
               color: Theme.of(context).colorScheme.primary),
           const SizedBox(height: 16),
-          // Daten aus dem Model verwenden
-          Text(personalInfo.title.toUpperCase(),
-              style: Theme.of(context)
-                  .textTheme
-                  .bodyMedium
-                  ?.copyWith(letterSpacing: 3)),
+
+          // GEÄNDERT: Statischer Text wurde durch die Animation ersetzt
+          SizedBox(
+            height: 20, // Feste Höhe, um Springen zu verhindern
+            child: AnimatedTextKit(
+              animatedTexts: animatedTexts.map((text) => TypewriterAnimatedText(
+                text.toUpperCase(),
+                textStyle: textStyle,
+                speed: const Duration(milliseconds: 100),
+              )).toList(),
+              pause: const Duration(milliseconds: 500),
+              repeatForever: true,
+            ),
+          ),
+
           context.isPhone ? const SizedBox(height: 32) : const Spacer(flex: 3),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -146,6 +222,7 @@ class _ProfileCard extends StatelessWidget {
       ),
     );
   }
+
 }
 
 class _IntroContent extends StatelessWidget {
@@ -194,9 +271,11 @@ class _IntroContent extends StatelessWidget {
       EdgeInsets.symmetric(horizontal: context.isPhone ? 24 : 60, vertical: 80),
       child: SingleChildScrollView(
         child: Column(
+
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const SizedBox(height: 30),
             Text('Hallo',
                 style: GoogleFonts.playfairDisplay(
                     fontSize: context.isPhone ? 60 : 82,
@@ -225,20 +304,18 @@ class _IntroContent extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 40),
-            // Text wird jetzt aus der JSON-Datei geladen
             Text(
               summary,
               style: textStyle,
+              // maxLines: 7, <-- ENTFERNT
+              // overflow: TextOverflow.ellipsis, <-- ENTFERNT
             ),
-            if (!isUnlocked) ...[
-              const SizedBox(height: 24),
-              Center(
-                child: TextButton(
-                  onPressed: onAccessRequest,
-                  child: const Text('Noch keinen Code? Jetzt Zugang anfragen'),
-                ),
+            const SizedBox(height: 24),
+            if (!isUnlocked)
+              TextButton(
+                onPressed: onAccessRequest,
+                child: const Text('Noch keinen Code? Jetzt Zugang anfragen'),
               ),
-            ]
           ],
         ).animate().fade(delay: 200.ms, duration: 500.ms).slideX(begin: 0.1),
       ),

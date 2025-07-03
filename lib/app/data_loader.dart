@@ -1,9 +1,9 @@
 // lib/app/data_loader.dart
 import 'dart:convert';
 import 'package:flutter/services.dart';
-import 'package:js_portfolio/models/cv_data.dart';
+import 'package:js_portfolio/models/models.dart';
 
-// Eine Klasse, die alle geladenen Daten enthält.
+// Klasse erweitert, um Projekte und Zertifikate zu halten
 class PortfolioData {
   final PersonalInfo personalInfo;
   final String summary;
@@ -12,6 +12,8 @@ class PortfolioData {
   final List<SkillCategory> skills;
   final List<LanguageItem> languages;
   final List<String> interests;
+  final List<ProjectItem> projects;       // NEU
+  final List<CertificateItem> certificates; // NEU
 
   PortfolioData({
     required this.personalInfo,
@@ -21,12 +23,13 @@ class PortfolioData {
     required this.skills,
     required this.languages,
     required this.interests,
+    required this.projects,      // NEU
+    required this.certificates,  // NEU
   });
 }
 
-// Die Funktion, die alle JSON-Dateien lädt und parst.
 Future<PortfolioData> loadPortfolioData() async {
-  // Alle Dateien parallel laden
+  // Lade-Liste erweitert
   final results = await Future.wait([
     rootBundle.loadString('assets/data/personal_info.json'),
     rootBundle.loadString('assets/data/summary.json'),
@@ -35,6 +38,8 @@ Future<PortfolioData> loadPortfolioData() async {
     rootBundle.loadString('assets/data/skills.json'),
     rootBundle.loadString('assets/data/languages.json'),
     rootBundle.loadString('assets/data/interests.json'),
+    rootBundle.loadString('assets/data/projects.json'),
+    rootBundle.loadString('assets/data/certificates.json'),
   ]);
 
   // JSON-Strings in Maps umwandeln
@@ -45,8 +50,9 @@ Future<PortfolioData> loadPortfolioData() async {
   final skillsJson = json.decode(results[4]) as Map<String, dynamic>;
   final languagesJson = json.decode(results[5]) as List<dynamic>;
   final interestsJson = json.decode(results[6]) as Map<String, dynamic>;
+  final projectsJson = json.decode(results[7]) as List<dynamic>;
+  final certificatesJson = json.decode(results[8]) as List<dynamic>;
 
-  // Maps in unsere Dart-Modelle umwandeln
   return PortfolioData(
     personalInfo: PersonalInfo.fromJson(personalInfoJson),
     summary: summaryJson['text'],
@@ -61,5 +67,10 @@ Future<PortfolioData> loadPortfolioData() async {
     languages:
     languagesJson.map((item) => LanguageItem.fromJson(item)).toList(),
     interests: List<String>.from(interestsJson['hobbies']),
+    // Maps in unsere Dart-Modelle umwandeln
+    projects: projectsJson.map((item) => ProjectItem.fromJson(item)).toList(),
+    certificates: certificatesJson
+        .map((item) => CertificateItem.fromJson(item))
+        .toList(), // NEU
   );
 }
